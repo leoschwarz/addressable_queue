@@ -12,5 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+#[cfg(feature = "serde")]
+extern crate serde;
+#[cfg(test)]
+extern crate serde_json;
+
 pub mod fifo;
 //TODO: pub mod lru;
