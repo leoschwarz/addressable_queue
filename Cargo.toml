@@ -1,0 +1,8 @@
+[package]
+name = "addressable_queue"
+version = "0.1.0"
+authors = ["Leo Schwarz <mail@leoschwarz.com>"]
+license = "Apache-2.0"
+repository = "https://github.com/leoschwarz/addressable_queue"
+
+[dependencies]
