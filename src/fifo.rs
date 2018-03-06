@@ -86,6 +86,25 @@ where
         self.pointers.len()
     }
 
+    /// Returns true if the queue contains an element for the specified key.
+    ///
+    /// ```
+    /// use addressable_queue::fifo::Queue;
+    ///
+    /// let mut queue = Queue::new();
+    /// queue.insert(2u8, 4u8);
+    /// queue.insert(3u8, 6u8);
+    /// queue.insert(4u8, 8u8);
+    /// queue.remove_key(&3);
+    ///
+    /// assert_eq!(queue.contains_key(&2), true);
+    /// assert_eq!(queue.contains_key(&3), false);
+    /// assert_eq!(queue.contains_key(&4), true);
+    /// ```
+    pub fn contains_key(&self, key: &K) -> bool {
+        self.pointers.contains_key(key)
+    }
+
     /// Insert an entry at the end of the queue.
     ///
     /// ```
